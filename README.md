@@ -23,9 +23,15 @@
     // test.js 예시
     const solution = require('./solution');
 
-    test('test case', () => {
-        expect(solution(1, 2).toBe(3)); // 예시 테스트 케이스
-    });
+    describe('solution function test', () => {
+        test('test case 1', () => {
+            expect(solution(1, 2).toBe(3)); // 예시 테스트 케이스
+        });
+        
+        test('test case 2', () => {
+            expect(solution(3, 4).toBe(7)); // 예시 테스트 케이스
+        });
+    })
     ```
 5. ~~Docker 이미지 빌드 및 실행하기~~ -> 이미지 빌드하려 했으나 로컬에 Jest 설치하는 방식으로 적용...
     ```javascript
@@ -130,8 +136,10 @@ rl.on('close', () => {
 });
 ```
 
-### **백준 한 줄 입력**
-- 백준은 파일 입출력으로 받는 것이 성능이 더 좋다고 한다.
+### **FileSystem 기반 한 줄 입력**
+- ~~백준은 파일 입출력으로 받는 것이 성능이 더 좋다고 한다.~~
+- 백준에서 아래 방법대로 할 경우, Windows 상에서는 /dev/stdin 경로를 따르지 않음
+- 로컬에서 테스트하기 번거로운 부분이 존재함
 ```javascript
 const fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
@@ -139,7 +147,7 @@ let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 console.log(input);
 ```
 
-### **백준 여러 줄 입력**
+### **FileSystem 기반 여러 줄 입력**
 - case )
     - 3
     - 1 3 2
