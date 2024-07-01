@@ -61,16 +61,18 @@
 ---
 ## Node.js 입출력 
 ### **기본 readline 설정하기**
+**⭐cri, ioi로 snippet 등록함**
 ```javascript
-// readline 모듈
+// readline 모듈 (cri)
 const readline = require('readline');
 
-// 입출력 인터페이스 설정
+// 입출력 인터페이스 설정 (cri)
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
 
+// input/output interface (ioi)
 rl.on('line', (line) => {
     /* 
         한 줄씩 입력
