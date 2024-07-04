@@ -12,7 +12,6 @@ const solution = (t, p) => {
     let count = 0;
 
     while (end !== t.length + 1) {
-        console.log(parseInt(t.substring(start, end)), +p);
         if (parseInt(t.substring(start, end)) <= +p) {
             count++;
         }
