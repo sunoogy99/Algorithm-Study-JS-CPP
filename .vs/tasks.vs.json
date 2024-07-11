@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-solution",
+      "appliesTo": "C++/SWEA/D3/24시간/solution.cpp",
+      "type": "launch"
+    }
+  ]
+}
