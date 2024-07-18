@@ -11,6 +11,7 @@ unsigned long long findMax() {
 		groupElement[i] += N / P;
 	}
 
+	// 나머지 균등 분배 -> 곱의 최대 경우 나옴
 	int remain = N % P;
 	for (int i = 1; i <= remain; i++) {
 		groupElement[i] += 1;
